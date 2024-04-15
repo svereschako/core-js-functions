@@ -1,4 +1,3 @@
-
 /* *********************************************************************************************
  *                                                                                             *
  * Please read the following tutorial before implementing tasks:                                *
@@ -132,7 +131,7 @@ const memoize = (func) => {
  * }, 2);
  * retryer() => 2
  */
-const retry = (func, attempts) => () => {  
+const retry = (func, attempts) => () => {
   for (let attempt = 0; attempt < attempts; attempt += 1) {
     try {
       return func();
@@ -168,7 +167,7 @@ const retry = (func, attempts) => () => {
  * cos(3.141592653589793) ends
  *
  */
-const logger =  
+const logger =
   (func, logFunc) =>
   (...args) => {
     const argString = args.map((arg) => JSON.stringify(arg)).join(',');
