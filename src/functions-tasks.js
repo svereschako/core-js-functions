@@ -169,8 +169,7 @@ const retry = (func, attempts) => () => {
  * cos(3.141592653589793) ends
  *
  */
-const logger =
-  throw new Error('Not implemented');
+const logger =  
   (func, logFunc) =>
   (...args) => {
     const argString = args.map((arg) => JSON.stringify(arg)).join(',');
