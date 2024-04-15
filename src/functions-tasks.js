@@ -81,7 +81,14 @@ const getPowerFunction = (exponent) => (x) => x ** exponent;
  *   getPolynom()      => null
  */
 const getPolynom = (...coefficients) =>
-  ;
+  coefficients.length !== 0
+    ? (x) =>
+        coefficients.reduce(
+          (result, coeff, index) =>
+            result + coeff * x ** (coefficients.length - 1 - index),
+          0
+        )
+    : null;
 
 /**
  * Memoizes passed function and returns function
