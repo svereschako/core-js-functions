@@ -133,8 +133,7 @@ const memoize = (func) => {
  * }, 2);
  * retryer() => 2
  */
-const retry = (func, attempts) => () => {
-  throw new Error('Not implemented');
+const retry = (func, attempts) => () => {  
   for (let attempt = 0; attempt < attempts; attempt += 1) {
     try {
       return func();
